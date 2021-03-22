@@ -12,14 +12,21 @@ function person() {
     const height = form.querySelector('.height')
     //mostrando os valores
     // console.log(name.value, lastname.value, weight.value, height.value)
-    
-    const tempObj = { name, lastname, weight, height }
-    persons.push({...tempObj})
+    //nunca adicione os valores em passar os acessos aos campos, resulta em lixo no obj
+    const tempObj = {
+      name: name.value, 
+      lastname: lastname.value, 
+      weight: weight.value, 
+      height: height.value
+    }
+//mostrando os valores do objeto
+    console.log(tempObj)
+    persons.push(tempObj)
     resultado.innerHTML += `<p>
-      ${persons[0].name.value} 
-      ${persons[0].lastname.value} 
-      ${persons[0].weight.value} 
-      ${persons[0].height.value} 
+      ${name.value} 
+      ${lastname.value} 
+      ${weight.value} 
+      ${height.value} 
     </p>`;
   }
 
