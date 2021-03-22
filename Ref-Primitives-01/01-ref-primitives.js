@@ -16,5 +16,28 @@ let numbers = [1,2,3,4]
 // numbersPast.pop()
 // console.log(numbers, numbersPast)
 //usando o operador spread ...
-let numberRef = [...numbers]
-console.log(numberRef);
+///passagem de valores e não de referência para o array
+let numberNotRef = [...numbers]
+let numberOfRef = numberNotRef
+console.log(numberNotRef);
+numbers.pop()
+numberOfRef.shift()
+//observe que não temos a mesma referência do objeto apontado ao 
+//realizar as alterações no array numbers e numberRef
+console.log(numberNotRef,numberOfRef, numbers);
+
+const personObject = {
+  name: 'Lucas',
+  lastName: 'Neto'
+}
+console.log(personObject)
+
+const personObject2 = personObject
+//passando os valores e criando uma nova referência personObject3
+const personObject3 = {...personObject}
+personObject.name = 'Paulo'
+console.log(personObject2)
+console.log(personObject3)
+personObject3.name = 'Lilian'
+console.log(personObject3)
+
