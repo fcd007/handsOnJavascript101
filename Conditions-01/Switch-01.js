@@ -2,7 +2,7 @@ const data = new Date('2021-01-01');
 const diaSemana = data.getDay();
 // console.log(diaSemana);
 
-let diaSemanaTexto;
+// let diaSemanaTexto;
 // if(diaSemana === 0){
 //   diaSemanaTexto = 'Domingo';
 // } else if(diaSemana === 1) {
